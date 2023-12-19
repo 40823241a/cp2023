@@ -2,7 +2,7 @@
 <p><a href="https://github.com/mdecycu/cmsite"> https://github.com/40823241a/cp2023</a></p>
 <p>(倉儲連結)</p>
 <h1>W6</h1>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">void draw_roc_flag(gdImagePtr img);
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">void draw_roc_flag(gdImagePtr img);
 void draw_white_sun(gdImagePtr img, int x, int y, int size, int color);
 
 int main() {
@@ -41,7 +41,7 @@ void draw_roc_flag(gdImagePtr img) {
     gdImageFilledRectangle(img, 0, 0, width, height, red);
     // blue rectangle area
     gdImageFilledRectangle(img, 0, 0, (int)(width/2.0), (int)(height/2.0), blue);
-
+   
     draw_white_sun(img, center_x, center_y, sun_radius, white);
 }
 
@@ -54,7 +54,7 @@ void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, 
         //printf("%.3f", angle);
         toX = center_x + cos(angle)*sun_radius;
         toY = center_y + sin(angle)*sun_radius;
-
+        
         if (i!=0){
             gdImageLine(img, fromX, fromY, toX, toY, color);
         }
@@ -62,8 +62,7 @@ void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, 
         fromY = toY;
    }
 }</pre>
-<p><img alt="" height="400" src="/images/roc_flag_in_gd.png" width="600"/></p>
-<p>利用Replit生成台灣國旗 , </p>
+<p><img alt="" height="200" src="/images/roc_flag_in_gd.png" width="300"/><br/><br/>利用Replit生成台灣國旗</p>
 <h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>
