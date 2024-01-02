@@ -2,7 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li><a href='W2~W5.html'>W2~W5</a><li><a href='W6.html'>W6</a><li><a href='W7.html'>W7</a><li><a href='Brython.html'>Brython</a></li>
+                     <li class='has-children'><a href='About.html'>About</a><ul class='dropdown'><li><a href='IPV4網路設定.html'>IPV4網路設定</a></li></ul><li><a href='W6.html'>W6</a><li><a href='W7.html'>W7</a><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,7 +142,63 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='W6.html'>Next</a> >> W6<br /><h1>W2~W5</h1>
+    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='W6.html'>Next</a> >> W6<br /><h1>IPV4網路設定</h1>
+<p>利用ChatGPT了解架構及相關資訊</p>
+<ol>
+<li>
+<p><span style="color: #000080;"><strong>確認網路需求：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">決定你的網路架構，包括需要多少個主機和子網。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>配置IP地址：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">每台裝置都需要一個唯一的IPv4地址。確保選擇的地址不與其他設備相衝突。</span></li>
+<li><span style="color: #000080;">IPv4地址通常是由四個八位元組組成，例如：192.168.1.1。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>設定子網遮罩：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">子網遮罩用於區分主機位址和網路位址。常見的子網遮罩包括255.255.255.0。</span></li>
+<li><span style="color: #000080;">子網遮罩指定了IP地址的哪一部分用於網路，哪一部分用於主機。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>設定預設閘道：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">預設閘道是指將資料包發送到目的地時使用的下一個節點，通常是你的路由器的IP地址。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>設定DNS伺服器：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">DNS伺服器用於解析主機名稱到IP地址。你可以使用ISP提供的DNS伺服器，或使用其他公共DNS服務，如Google的8.8.8.8。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>進行設定：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">在Windows中，你可以透過「控制台」 &gt; 「網路和共用中心」 &gt; 「變更介面卡設定」，選擇適當的網路介面卡，右鍵點選「內容」，然後在「Internet Protocol Version 4 (TCP/IPv4)」中輸入相應的資訊。</span></li>
+<li><span style="color: #000080;">在Linux中，你可以編輯 <code>/etc/network/interfaces</code> 文件或使用 <code>ifconfig</code> 和 <code>route</code> 指令進行設定。</span></li>
+<li><span style="color: #000080;">在macOS中，你可以使用「系統偏好設定」 &gt; 「網路」，選擇你的連接方式，點選「進階」進行IPv4設定。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>測試連接：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">確保所有設定正確，通過 <code>ping</code> 指令或其他網路工具測試連接。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>監視和維護：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">定期監視網路流量，確保沒有未授權的設備使用你的IP地址。</span></li>
+<li><span style="color: #000080;">維護網路安全，定期更新防火牆設定並檢查日誌。</span></li>
+</ul>
+</li>
+</ol>
 <p></p>
 <br />About << <a href='About.html'>Previous</a> <a href='W6.html'>Next</a> >> W6</div>
         
