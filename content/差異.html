@@ -2,6 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -141,11 +142,68 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='IPV4與IPV6網路設定&差異.html'>Next</a> >> IPV4與IPV6網路設定&差異<br /><h1>About</h1>
-<p><a href="https://40823241a.github.io/cp2023/content/index.html">個人網站</a></p>
-<p><a href="https://github.com/40823241a/cp2023">個人倉儲</a></p>
-<p></p>
-<br /> <a href='IPV4與IPV6網路設定&差異.html'>Next</a> >> IPV4與IPV6網路設定&差異</div>
+    <div id="tipue_search_content">IPV6 << <a href='IPV6.html'>Previous</a> <a href='特定設定操作.html'>Next</a> >> 特定設定操作<br /><h1>差異</h1>
+<p><span style="background-color: #ffff00;">IPv4</span>（Internet Protocol version 4）和<span style="background-color: #ffff00;">IPv6</span>（Internet Protocol version 6）是兩個不同版本的網際網路協定，主要用於識別和定位網路上的設備。以下是IPv4和IPv6之間的主要差異：</p>
+<ol>
+<li>
+<p><strong>地址位數：</strong></p>
+<ul>
+<li><strong>IPv4：</strong> 使用<span style="background-color: #ffffff; color: #ff0000;">32位元</span>的地址，約有42億（2^32）個可能的地址。</li>
+<li><strong>IPv6：</strong> 使用<span style="background-color: #ffffff; color: #ff0000;">128位元</span>的地址，提供了極大的地址空間，約有3.4 x 10^38個可能的地址。</li>
+</ul>
+</li>
+<li>
+<p><strong>地址表示法：</strong></p>
+<ul>
+<li><strong>IPv4：</strong> 以<span style="color: #ff0000;">點分十進制</span>表示，例如192.168.0.1。</li>
+<li><strong>IPv6：</strong> 以<span style="color: #ff0000;">冒號分隔</span>的<span style="color: #ff0000;">八組十六進制</span>數字表示，例如2001:0db8:85a3:0000:0000:8a2e:0370:7334。</li>
+</ul>
+</li>
+<li>
+<p><strong>地址配置方式：</strong></p>
+<ul>
+<li><strong>IPv4：</strong> 可以使用<span style="color: #ff0000;">靜態配置或DHCP</span>（動態主機配置協定）自動獲取IP地址。</li>
+<li><strong>IPv6：</strong> 支援<span style="color: #ff0000;">靜態配置</span>、<span style="color: #ff0000;">SLAAC</span>（Stateless Address Autoconfiguration）和<span style="color: #ff0000;">DHCPv6</span>。</li>
+</ul>
+</li>
+<li>
+<p><strong>子網遮罩：</strong></p>
+<ul>
+<li><strong>IPv4：</strong> 使用<span style="color: #ff0000;">子網遮罩</span>來劃分網路和主機位址，通常是<span style="color: #ff0000;">32位元</span>。</li>
+<li><strong>IPv6：</strong> 使用<span style="color: #ff0000;">前綴</span>來劃分網路和主機位址，通常是<span style="color: #ff0000;">64位元</span>。</li>
+</ul>
+</li>
+<li>
+<p><strong>通訊協議：</strong></p>
+<ul>
+<li><strong>IPv4：</strong> 主要使用ARP（地址解析協定）和ICMP（Internet控制消息協定）。</li>
+<li><strong>IPv6：</strong> <span style="color: #ff0000;">不</span>再<span style="color: #ff0000;">使用ARP</span>，而是<span style="color: #ff0000;">使用ICMPv6</span>，還<span style="color: #ff0000;">引入</span>了<span style="color: #ff0000;">新</span>的一些<span style="color: #ff0000;">協定</span>，如<span style="color: #ff0000;">NDP（鄰居發現協定）</span>。</li>
+</ul>
+</li>
+<li>
+<p><strong>NAT（網路位址轉換）需求：</strong></p>
+<ul>
+<li><strong>IPv4：</strong> 由於地址空間有限，常需要<span style="color: #ff0000;">使用NAT進行私有</span>網路與<span style="color: #ff0000;">公共</span>網路<span style="color: #ff0000;">之間的轉換</span>。</li>
+<li><strong>IPv6：</strong> 設計目標之一是<span style="color: #ff0000;">提供足夠的地址空間</span>，<span style="color: #ff0000;">減少對NAT的需求</span>。</li>
+</ul>
+</li>
+<li>
+<p><strong>安全性和配置靈活性：</strong></p>
+<ul>
+<li><strong>IPv6：</strong> 在協定層面支援IPsec，而在IPv4中，IPsec通常是一種附加的安全層。</li>
+<li><strong>IPv6：</strong> 提供更好的配置靈活性和簡化的網路管理。</li>
+</ul>
+</li>
+<li>
+<p><strong>廣播：</strong></p>
+<ul>
+<li><strong>IPv4：</strong> 使用廣播通訊，可能會對整個網路產生流量。</li>
+<li><strong>IPv6：</strong> 不再使用廣播，而是使用多播。</li>
+</ul>
+</li>
+</ol>
+<p>總體而言，IPv6被設計為IPv4的升級版本，以應對IPv4地址空間的枯竭問題並提供更多的功能。然而，目前仍然存在大量的IPv4設備和應用程式，因此在過渡期間，IPv4和IPv6將共存。</p>
+<br />IPV6 << <a href='IPV6.html'>Previous</a> <a href='特定設定操作.html'>Next</a> >> 特定設定操作</div>
         
     <!-- footer -->
       <div class="container">
