@@ -4,7 +4,7 @@
 <p></p>
 <h1>IPV4與IPV6網路設定&amp;差異</h1>
 <p>利用ChatGPT了解架構及相關資訊</p>
-<h4>IPV4</h4>
+<h2>IPV4</h2>
 <ol>
 <li>
 <p><span style="color: #000080;"><strong>確認網路需求：</strong></span></p>
@@ -61,7 +61,7 @@
 </li>
 </ol>
 <p><img alt="" height="24" src="/images/ipv4.png" width="200"/></p>
-<h4>IPV6</h4>
+<h2>IPV6</h2>
 <ol>
 <li>
 <p><span style="color: #000080;"><strong>確認網路需求：</strong></span></p>
@@ -116,7 +116,7 @@
 </ul>
 </li>
 </ol>
-<br/><span style="color: #000080;"></span>特定設定操作
+<h1>特定設定操作</h1>
 <p>我了解到 Replit、s.cycu.org 和 localhost 分別是三個不同情境下進行個人和分組倉庫設定操作的平台或環境。在這裡，我將提供一般性的指導，因為具體的設定可能取決於你使用的版本控制系統（例如Git）、編程語言和項目需求。</p>
 <h2>Replit</h2>
 <p>當在 Replit 上創建項目時，你可以進行個人和分組倉庫的相關設定。以下是詳細的步驟：</p>
@@ -175,18 +175,66 @@
 <p><span>在本地開發環境（localhost）進行倉庫設置通常涉及使用版本控制系統，例如Git。以下是一般的步驟，以使用進行解釋：</span></p>
 <ol>
 <li>
-<p><strong>開啟終端機或命令行界面：</strong></p>
+<p><strong>打開終端或命令行界面:</strong></p>
 <ul>
-<li>打開終端機（Terminal）或命令行界面，這是一個用戶與電腦系統互動的介面。</li>
+<li>打開你的電腦上的終端機（Terminal）或命令行界面，這取決於你使用的操作系統。</li>
 </ul>
 </li>
 <li>
-<p><strong>導航到你的本地項目目錄：</strong></p>
+<p><strong>導航到你的本地項目目錄:</strong></p>
 <ul>
-<li>使用 <code>cd</code> 命令（變更目錄）進入你的本地項目目錄。例如：<br/><br/></li>
+<li>使用 <code>cd</code> 命令（改變目錄）導航到你的本地項目目錄。例如：
+<div class="bg-black rounded-md">
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>cd /path/to/your/project<br/></span></div>
+</div>
+<img alt="" height="29" src="/images/0001.png" width="200"/></li>
+</ul>
+</li>
+<li>
+<p><strong>使用命令行工具執行相關的倉庫設置:</strong></p>
+<ul>
+<li>如果尚未初始化 Git 倉庫，可以使用以下命令進行初始化：
+<div class="bg-black rounded-md">
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">git init</div>
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span><img alt="" height="32" src="/images/0002.png" width="200"/> </span></div>
+</div>
+</li>
+<li>如果已有遠程倉庫，可以使用以下命令添加遠程倉庫地址：
+<div class="bg-black rounded-md">
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">git remote add origin &lt;remote_repository_url&gt;</div>
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><img alt="" height="28" src="/images/0003.png" width="200"/></div>
+</div>
+</li>
+<li>如果需要配置使用者名稱和郵箱，可以使用以下命令：
+<div class="bg-black rounded-md">
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">git config --global user.name "Your Name"<br/>git config --global user.email "your.email@example.com"</div>
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span><img alt="" height="38" src="/images/0004.png" width="200"/></span></div>
+</div>
+</li>
+<li>其他可能的設置包括分支管理、忽略文件等，可以使用相應的 Git 命令完成設置。</li>
+</ul>
+</li>
+<li>
+<p><strong>提交更改和推送到遠程倉庫:</strong></p>
+<ul>
+<li>使用以下命令將更改添加到本地倉庫：
+<div class="bg-black rounded-md">
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">git add .<br/>git commit -m "Commit message"</div>
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span><img alt="" height="38" src="/images/0005.png" width="200"/></span></div>
+</div>
+</li>
+<li>如果是第一次推送，使用以下命令將更改推送到遠程倉庫：
+<div class="bg-black rounded-md">
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md">git push -u origin master</div>
+<div class="flex items-center relative text-gray-200 bg-gray-800 dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span><img alt="" height="29" src="/images/00006.png" width="200"/></span></div>
+</div>
+</li>
+<li>其中，<code>master</code> 可能是你當前的主分支，根據你的設置可能會有所不同。</li>
 </ul>
 </li>
 </ol>
+<p>這些是一般的步驟，具體的命令和設置可能會因項目需求、團隊規範或個人偏好而有所不同。確保你熟悉你所使用版本控制系統的命令和文檔，以確保正確地配置和管理你的本地倉庫。</p>
+<p><br/><br/></p>
 <h1>W6</h1>
 <p><span>C 程式練習二:</span></p>
 <p>1. 在可攜程式環境中以 SciTE + Tiny C Compiler 編譯系統, 使用 Tools - Go 類編譯方式執行.</p>

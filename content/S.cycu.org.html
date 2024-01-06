@@ -2,7 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -142,73 +142,33 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Localhost << <a href='Localhost.html'>Previous</a> <a href='W7.html'>Next</a> >> W7<br /><h1>W6</h1>
-<p><span>C 程式練習二:</span></p>
-<p>1. 在可攜程式環境中以 SciTE + Tiny C Compiler 編譯系統, 使用 Tools - Go 類編譯方式執行.</p>
-<p>2. 在可攜程式環境中以 SciTE + Tiny C Compiler 編譯系統, 使用 Tools - Compile 編譯連結後取得 a.out, 然後在命令列中以 a.out 執行.</p>
-<p>3. 在 Replit 全球資訊網 IDE 環境中的 Shell 頁面, 以 cc ex1.c 產生可執行檔案 a.out, 並以 ./a.out 執行, 或者以 cc ex1.c -o ex1 指定編譯連結後的可執行檔案名稱為 ex1 後, 以 ./ex1 執行.</p>
-<p>最後將所選擇的 C 程式範例執行過程與相關說明內容, 整理在<span>個人 github 帳號下的 cp2023 倉儲網頁</span>中的<span> </span><span>c_ex</span><span> </span>頁面</p>
-<p><a href="https://mde.tw/cpnote/downloads/gnuplot_ex1.c">gnuplot_ex1.c</a> 原始碼如下:</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">// 包含標準輸出入程式庫的標頭文件
-// https://blog.csdn.net/weixin_38468077/article/details/101069365
-// http://www.gnuplot.info/demo/
-// https://github.com/sysprog21/rv32emu
-// https://github.com/sysprog21/semu 
-// https://docs.google.com/presentation/d/14N0cWG2SnBSqhc2cLF0_2VerB9FF8JN3
-// https://cs61c.org/fa23/
-// https://greenteapress.com/wp/think-python-2e/
-// https://github.com/ecalvadi/c99-examples
-// https://github.com/gouravthakur39/beginners-C-program-examples
-// https://github.com/ergenekonyigit/Numerical-Analysis-Examples
-// https://www.che.ncku.edu.tw/facultyweb/changct/html/teaching/CPPandMATLAB/Past/pdf%20Files/Chap02-Ling.pdf
-// https://gteceducation.com.sg/Brochures/PROGRAMMING/C%20PROGRAMMING%20FULL.pdf
-// https://jsommers.github.io/cbook/cbook.pdf
-// https://jsommers.github.io/cbook/index.html
-// http://student.itee.uq.edu.au/courses/csse2310/CProgrammingNotes.pdf
-// http://cslibrary.stanford.edu/101/EssentialC.pdf
-// https://publications.gbdirect.co.uk/c_book/
-// https://www.fossil-scm.org/fossil-book/doc/2ndEdition/fossilbook.pdf
-// ***** execute on replit 
-// cd downloads
-// cc gnuplot_ex1.c -o gnuplot_ex1
-// ./gnuplot_ex1
-#include &lt;stdio.h&gt;
-  
-// 主函式
-int main() {
-    // Start a Gnuplot process using popen
-    FILE *gnuplotPipe = popen("gnuplot -persistent", "w");
-    if (!gnuplotPipe) {
-        fprintf(stderr, "Failed to start Gnuplot.\n");
-        return 1;
-    }
-  
-    // Use Gnuplot plotting commands, specify font and output as PNG
-    fprintf(gnuplotPipe, "set terminal png font 'default,10' size 800,400\n");
-    fprintf(gnuplotPipe, "set output './../images/gnuplot_ex1.png'\n");
-    fprintf(gnuplotPipe, "plot sin(x)");
-    // Close popen
-    pclose(gnuplotPipe);
-  
-    return 0;
-}</pre>
-<p><span>執行結果位於 images:</span></p>
-<p style="top: 387.614px;"><img alt="" height="125" src="./../images/gnuplot_ex1.png" width="250"/></p>
-<p style="top: 387.614px;"></p>
-<p>前述 Replit 平台環境中, 已經加入 Gnuplot 繪圖程式庫, 若循相同設定, 在 replit.nix 中加入 gd 繪圖程式庫以及 ncurses 終端機圖形介面程式庫, 則可結合 C/C++ 進行各式靜態與動態繪圖練習:</p>
-<p>replit.nix</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">{ pkgs }: {
-    deps = [
-      pkgs.gnuplot
-      pkgs.ncurses.dev
-      pkgs.gd
-    ];
-}</pre>
-<p>納入 ncurses 後的 C 程式編譯連結指令為: cc ncurses_ex1.c -lncurses -lm</p>
-<p>其中 -lncurses 會在連結階段導入所需的 ncurses 程式庫, 而 -lm 則導入 math.h 時連結數學程式庫之用.</p>
-<p>至於納入 gd 繪圖程式庫後的編譯連結指令為: cc gd_ex1.c -lgd -lm</p>
-<p>其中 -lgd 會在連結階段導入所需的 gd 程式庫, 而 -lm 則導入數學程式庫.</p>
-<br />Localhost << <a href='Localhost.html'>Previous</a> <a href='W7.html'>Next</a> >> W7</div>
+    <div id="tipue_search_content">Replit << <a href='Replit.html'>Previous</a> <a href='Localhost.html'>Next</a> >> Localhost<br /><h1>S.cycu.org</h1>
+<p>s.cycu.org 是中原大學（CYCU）的一個平台，用於項目管理和版本控制。以下有操作方式，可有助於理解在 s.cycu.org 上進行項目設定的過程：</p>
+<p><strong>登錄到 s.cycu.org 平台:</strong></p>
+<ol>
+<li>打開瀏覽器，並訪問 s.cycu.org。</li>
+<li>使用你的中原大學學生或項目賬戶登錄。</li>
+</ol>
+<p><strong>進入項目或倉庫頁面:</strong></p>
+<ol start="3">
+<li>登錄後，你可能會看到你的儀表板或項目列表。找到你要進行設定的具體項目，然後點擊進入該項目頁面。</li>
+</ol>
+<p><strong>尋找設置或管理選項:</strong></p>
+<ol start="4">
+<li>在項目頁面，尋找類似 "Settings"、"項目設置" 或 "管理" 的選項。通常，這些選項位於頁面的頂部導航欄或頁面側邊欄。</li>
+<li>如果你使用版本控制系統（例如Git），你可能會找到與倉庫設置和版本控制相關的選項。</li>
+</ol>
+<p><strong>版本控制和倉庫設置:</strong></p>
+<ol start="6">
+<li>在項目設置中，可能會有關於版本控制的設置，你可以設置遠程倉庫鏈接，配置分支策略等。</li>
+<li>你可能需要提供版本控制系統的憑證（例如Git倉庫的URL）。</li>
+</ol>
+<p><strong>訪問權限:</strong></p>
+<ol start="8">
+<li>在設置中，尋找與訪問權限相關的選項。你可能可以設置項目是私有還是公開的，以及定義誰可以訪問和編輯項目。</li>
+<li>確保按照項目需求進行正確的訪問權限設置。</li>
+</ol>
+<br />Replit << <a href='Replit.html'>Previous</a> <a href='Localhost.html'>Next</a> >> Localhost</div>
         
     <!-- footer -->
       <div class="container">
