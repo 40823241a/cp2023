@@ -2,6 +2,7 @@
         <head>
         <title>cmsite</title>
         <meta charset="utf-8">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -141,11 +142,62 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='IPV4與IPV6網路設定&差異.html'>Next</a> >> IPV4與IPV6網路設定&差異<br /><h1>About</h1>
-<p><a href="https://40823241a.github.io/cp2023/content/index.html">個人網站</a></p>
-<p><a href="https://github.com/40823241a/cp2023">個人倉儲</a></p>
-<p></p>
-<br /> <a href='IPV4與IPV6網路設定&差異.html'>Next</a> >> IPV4與IPV6網路設定&差異</div>
+    <div id="tipue_search_content">IPV4 << <a href='IPV4.html'>Previous</a> <a href='特定設定操作.html'>Next</a> >> 特定設定操作<br /><h1>IPV6</h1>
+<ol>
+<li>
+<p><span style="color: #000080;"><strong>確認網路需求：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">像IPv4一樣，確定你的網路架構，包括需要多少個主機和子網。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>配置IPv6地址：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">IPv6地址通常由八個四位數字組成，例如：2001:0db8:85a3:0000:0000:8a2e:0370:7334。</span></li>
+<li><span style="color: #000080;">確保每個設備都有唯一的IPv6地址，可以手動分配或使用IPv6自動配置。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>設定子網遮罩：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">IPv6的子網遮罩稱為「前綴」，通常由網路提供商提供。例如，<code>2001:0db8:85a3::/64</code>。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>設定預設閘道：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">設定IPv6的預設閘道，通常是你的IPv6路由器的地址。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>設定DNS伺服器：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">設定IPv6 DNS伺服器，用於解析主機名稱到IPv6地址。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>進行設定：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">在Windows中，你可以透過「控制台」 &gt; 「網路和共用中心」 &gt; 「變更介面卡設定」，選擇適當的網路介面卡，然後在「Internet Protocol Version 6 (TCP/IPv6)」中輸入相應的資訊。</span></li>
+<li><span style="color: #000080;">在Linux中，你可以編輯 <code>/etc/network/interfaces</code> 文件或使用 <code>ip</code> 和 <code>route</code> 指令進行設定。</span></li>
+<li><span style="color: #000080;">在macOS中，你可以使用「系統偏好設定」 &gt; 「網路」，選擇你的連接方式，點選「進階」進行IPv6設定。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>測試連接：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">確保所有設定正確，通過 <code>ping6</code> 指令或其他IPv6測試工具測試連接。</span></li>
+</ul>
+</li>
+<li>
+<p><span style="color: #000080;"><strong>監視和維護：</strong></span></p>
+<ul>
+<li><span style="color: #000080;">監視IPv6流量，確保沒有未授權的設備使用你的IPv6地址。</span></li>
+<li><span style="color: #000080;">定期更新防火牆設定，確保IPv6網路的安全性。</span><span style="color: #000080;"></span></li>
+</ul>
+</li>
+</ol>
+<br />IPV4 << <a href='IPV4.html'>Previous</a> <a href='特定設定操作.html'>Next</a> >> 特定設定操作</div>
         
     <!-- footer -->
       <div class="container">

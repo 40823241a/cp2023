@@ -234,8 +234,9 @@
 </li>
 </ol>
 <p>這些是一般的步驟，具體的命令和設置可能會因項目需求、團隊規範或個人偏好而有所不同。確保你熟悉你所使用版本控制系統的命令和文檔，以確保正確地配置和管理你的本地倉庫。</p>
-<p><br/><br/></p>
-<h1>W6</h1>
+<h1><span>Exercises</span></h1>
+<h2>W2~W5</h2>
+<h2>W6~W7</h2>
 <p><span>C 程式練習二:</span></p>
 <p>1. 在可攜程式環境中以 SciTE + Tiny C Compiler 編譯系統, 使用 Tools - Go 類編譯方式執行.</p>
 <p>2. 在可攜程式環境中以 SciTE + Tiny C Compiler 編譯系統, 使用 Tools - Compile 編譯連結後取得 a.out, 然後在命令列中以 a.out 執行.</p>
@@ -301,7 +302,6 @@ int main() {
 <p>其中 -lncurses 會在連結階段導入所需的 ncurses 程式庫, 而 -lm 則導入 math.h 時連結數學程式庫之用.</p>
 <p>至於納入 gd 繪圖程式庫後的編譯連結指令為: cc gd_ex1.c -lgd -lm</p>
 <p>其中 -lgd 會在連結階段導入所需的 gd 程式庫, 而 -lm 則導入數學程式庫.</p>
-<h1>W7</h1>
 <p></p>
 <p><span>gd 程式庫繪圖練習:</span></p>
 <p><span><a href="/downloads/gd_roc.c">gd_roc.c</a> 程式碼</span></p>
@@ -446,6 +446,8 @@ void draw_star(gdImagePtr img, int x, int y, int size, int color) {
     gdImageFilledPolygon(img, points, 10, color);
 }</pre>
 <p><img alt="" height="149" src="/images/usa.png" width="250"/><br/><br/><br/>利用<span>C 與 gnuplot 及 gd 繪圖程式庫的結合以</span>生成台灣國旗以及美國國旗</p>
+<h2><span>C 結合 gd 繪圖程式庫畫出指定Flags</span></h2>
+<p><span></span></p>
 <h1>Brython</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
 <h4>Examples:</h4>

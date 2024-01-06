@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='IPV4與IPV6網路設定&差異.html'>IPV4與IPV6網路設定&差異</a><ul class='dropdown'><li><a href='Replit.html'>Replit</a><li><a href='S.cycu.org.html'>S.cycu.org</a><li><a href='Localhost.html'>Localhost</a></li></ul><li><a href='W6.html'>W6</a><li><a href='W7.html'>W7</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='IPV4與IPV6網路設定&差異.html'>IPV4與IPV6網路設定&差異</a><ul class='dropdown'><li><a href='IPV4.html'>IPV4</a><li><a href='IPV6.html'>IPV6</a></li></ul><li class='has-children'><a href='特定設定操作.html'>特定設定操作</a><ul class='dropdown'><li><a href='Replit.html'>Replit</a><li><a href='S.cycu.org.html'>S.cycu.org</a><li><a href='Localhost.html'>Localhost</a></li></ul><li class='has-children'><a href='Exercises.html'>Exercises</a><ul class='dropdown'><li><a href='W2~W5.html'>W2~W5</a><li><a href='W6~W7.html'>W6~W7</a><li><a href='C 結合 gd 繪圖程式庫畫出指定Flags.html'>C 結合 gd 繪圖程式庫畫出指定Flags</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,123 +142,9 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='Replit.html'>Next</a> >> Replit<br /><h1>IPV4與IPV6網路設定&差異</h1>
+    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='IPV4.html'>Next</a> >> IPV4<br /><h1>IPV4與IPV6網路設定&差異</h1>
 <p>利用ChatGPT了解架構及相關資訊</p>
-<h4>IPV4</h4>
-<ol>
-<li>
-<p><span style="color: #000080;"><strong>確認網路需求：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">決定你的網路架構，包括需要多少個主機和子網。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>配置IP地址：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">每台裝置都需要一個唯一的IPv4地址。確保選擇的地址不與其他設備相衝突。</span></li>
-<li><span style="color: #000080;">IPv4地址通常是由四個八位元組組成，例如：192.168.1.1。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>設定子網遮罩：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">子網遮罩用於區分主機位址和網路位址。常見的子網遮罩包括255.255.255.0。</span></li>
-<li><span style="color: #000080;">子網遮罩指定了IP地址的哪一部分用於網路，哪一部分用於主機。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>設定預設閘道：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">預設閘道是指將資料包發送到目的地時使用的下一個節點，通常是你的路由器的IP地址。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>設定DNS伺服器：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">DNS伺服器用於解析主機名稱到IP地址。你可以使用ISP提供的DNS伺服器，或使用其他公共DNS服務，如Google的8.8.8.8。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>進行設定：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">在Windows中，你可以透過「控制台」 &gt; 「網路和共用中心」 &gt; 「變更介面卡設定」，選擇適當的網路介面卡，右鍵點選「內容」，然後在「Internet Protocol Version 4 (TCP/IPv4)」中輸入相應的資訊。</span></li>
-<li><span style="color: #000080;">在Linux中，你可以編輯 <code>/etc/network/interfaces</code> 文件或使用 <code>ifconfig</code> 和 <code>route</code> 指令進行設定。</span></li>
-<li><span style="color: #000080;">在macOS中，你可以使用「系統偏好設定」 &gt; 「網路」，選擇你的連接方式，點選「進階」進行IPv4設定。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>測試連接：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">確保所有設定正確，通過 <code>ping</code> 指令或其他網路工具測試連接。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>監視和維護：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">定期監視網路流量，確保沒有未授權的設備使用你的IP地址。</span></li>
-<li><span style="color: #000080;">維護網路安全，定期更新防火牆設定並檢查日誌。</span></li>
-</ul>
-</li>
-</ol>
-<p><img alt="" height="24" src="./../images/ipv4.png" width="200"/></p>
-<h4>IPV6</h4>
-<ol>
-<li>
-<p><span style="color: #000080;"><strong>確認網路需求：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">像IPv4一樣，確定你的網路架構，包括需要多少個主機和子網。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>配置IPv6地址：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">IPv6地址通常由八個四位數字組成，例如：2001:0db8:85a3:0000:0000:8a2e:0370:7334。</span></li>
-<li><span style="color: #000080;">確保每個設備都有唯一的IPv6地址，可以手動分配或使用IPv6自動配置。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>設定子網遮罩：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">IPv6的子網遮罩稱為「前綴」，通常由網路提供商提供。例如，<code>2001:0db8:85a3::/64</code>。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>設定預設閘道：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">設定IPv6的預設閘道，通常是你的IPv6路由器的地址。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>設定DNS伺服器：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">設定IPv6 DNS伺服器，用於解析主機名稱到IPv6地址。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>進行設定：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">在Windows中，你可以透過「控制台」 &gt; 「網路和共用中心」 &gt; 「變更介面卡設定」，選擇適當的網路介面卡，然後在「Internet Protocol Version 6 (TCP/IPv6)」中輸入相應的資訊。</span></li>
-<li><span style="color: #000080;">在Linux中，你可以編輯 <code>/etc/network/interfaces</code> 文件或使用 <code>ip</code> 和 <code>route</code> 指令進行設定。</span></li>
-<li><span style="color: #000080;">在macOS中，你可以使用「系統偏好設定」 &gt; 「網路」，選擇你的連接方式，點選「進階」進行IPv6設定。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>測試連接：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">確保所有設定正確，通過 <code>ping6</code> 指令或其他IPv6測試工具測試連接。</span></li>
-</ul>
-</li>
-<li>
-<p><span style="color: #000080;"><strong>監視和維護：</strong></span></p>
-<ul>
-<li><span style="color: #000080;">監視IPv6流量，確保沒有未授權的設備使用你的IPv6地址。</span></li>
-<li><span style="color: #000080;">定期更新防火牆設定，確保IPv6網路的安全性。</span><span style="color: #000080;"></span></li>
-</ul>
-</li>
-</ol>
-<p><br/><span style="color: #000080;"></span>特定設定操作</p>
-<p>我了解到 Replit、s.cycu.org 和 localhost 分別是三個不同情境下進行個人和分組倉庫設定操作的平台或環境。在這裡，我將提供一般性的指導，因為具體的設定可能取決於你使用的版本控制系統（例如Git）、編程語言和項目需求。</p>
-<br />About << <a href='About.html'>Previous</a> <a href='Replit.html'>Next</a> >> Replit</div>
+<br />About << <a href='About.html'>Previous</a> <a href='IPV4.html'>Next</a> >> IPV4</div>
         
     <!-- footer -->
       <div class="container">

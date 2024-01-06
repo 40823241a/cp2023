@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='IPV4與IPV6網路設定&差異.html'>IPV4與IPV6網路設定&差異</a><ul class='dropdown'><li><a href='Replit.html'>Replit</a><li><a href='S.cycu.org.html'>S.cycu.org</a><li><a href='Localhost.html'>Localhost</a></li></ul><li><a href='W6.html'>W6</a><li><a href='W7.html'>W7</a><li><a href='Brython.html'>Brython</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='IPV4與IPV6網路設定&差異.html'>IPV4與IPV6網路設定&差異</a><ul class='dropdown'><li><a href='IPV4.html'>IPV4</a><li><a href='IPV6.html'>IPV6</a></li></ul><li class='has-children'><a href='特定設定操作.html'>特定設定操作</a><ul class='dropdown'><li><a href='Replit.html'>Replit</a><li><a href='S.cycu.org.html'>S.cycu.org</a><li><a href='Localhost.html'>Localhost</a></li></ul><li class='has-children'><a href='Exercises.html'>Exercises</a><ul class='dropdown'><li><a href='W2~W5.html'>W2~W5</a><li><a href='W6~W7.html'>W6~W7</a><li><a href='C 結合 gd 繪圖程式庫畫出指定Flags.html'>C 結合 gd 繪圖程式庫畫出指定Flags</a></li></ul><li><a href='Brython.html'>Brython</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,152 +142,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W6 << <a href='W6.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>W7</h1>
-<p></p>
-<p><span>gd 程式庫繪圖練習:</span></p>
-<p><span><a href="./../downloads/gd_roc.c">gd_roc.c</a> 程式碼</span></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">void draw_roc_flag(gdImagePtr img);
-void draw_white_sun(gdImagePtr img, int x, int y, int size, int color);
-
-int main() {
-    // width 3: height 2
-    int width = 1200;
-    int height = (int)(width*2.0 / 3.0);
-
-    gdImagePtr img = gdImageCreateTrueColor(width, height);
-    gdImageAlphaBlending(img, 0);
-
-    draw_roc_flag(img);
-
-    FILE *outputFile = fopen("./../images/roc_flag1.png", "wb");
-    if (outputFile == NULL) {
-        fprintf(stderr, "Error opening the output file.\n");
-        return 1;
-    }
-    gdImagePngEx(img, outputFile, 9);
-    fclose(outputFile);
-    gdImageDestroy(img);
-    return 0;
-}
-
-void draw_roc_flag(gdImagePtr img) {
-    int width = gdImageSX(img);
-    int height = gdImageSY(img);
-    int red, white, blue;
-    int center_x = (int)(width/4);
-    int center_y = (int)(height/4);
-    int sun_radius = (int)(width/8);
-    // Colors for the flag
-    red = gdImageColorAllocate(img, 242, 0, 0); // Red color
-    white = gdImageColorAllocate(img, 255, 255, 255); // White stripes
-    blue = gdImageColorAllocate(img, 0, 41, 204); // Blue
-    // red rectangle area
-    gdImageFilledRectangle(img, 0, 0, width, height, red);
-    // blue rectangle area
-    gdImageFilledRectangle(img, 0, 0, (int)(width/2.0), (int)(height/2.0), blue);
-   
-    draw_white_sun(img, center_x, center_y, sun_radius, white);
-}
-
-void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int color) {
-    float angle = 0;
-    int fromX, fromY;
-    int toX, toY;
-    for (int i=0; i&lt;24; i++){
-        angle += 5*M_PI*2/12;
-        //printf("%.3f", angle);
-        toX = center_x + cos(angle)*sun_radius;
-        toY = center_y + sin(angle)*sun_radius;
-        
-        if (i!=0){
-            gdImageLine(img, fromX, fromY, toX, toY, color);
-        }
-        fromX = toX;
-        fromY = toY;
-   }
-}</pre>
-<p><img alt="" height="200" src="./../images/roc_flag_in_gd.png" width="300"/></p>
-<p>******************************************************</p>
-<p></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">void draw_usa_flag(gdImagePtr img);
-void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotation_angle);
-
-int main() {
-    int width = 800;
-    int height = (int)(width / 1.9);
-
-    gdImagePtr img = gdImageCreateTrueColor(width, height);
-    gdImageAlphaBlending(img, 0);
-
-    draw_usa_flag(img);
-
-    FILE *outputFile = fopen("./../images/usa_flag.png", "wb");
-    if (outputFile == NULL) {
-        fprintf(stderr, "Error opening the output file.\n");
-        return 1;
-    }
-
-    gdImagePngEx(img, outputFile, 9);
-    fclose(outputFile);
-    gdImageDestroy(img);
-
-    return 0;
-}
-
-void draw_usa_flag(gdImagePtr img) {
-    int width = gdImageSX(img);
-    int height = gdImageSY(img);
-    int red, white, blue;
-    // Colors for the flag
-    red = gdImageColorAllocate(img, 178, 34, 52); // Red stripes
-    white = gdImageColorAllocate(img, 255, 255, 255); // White stripes
-    blue = gdImageColorAllocate(img, 60, 59, 110); // Blue field
-
-    int stripe_height = height / 13;
-    int stripe_width = width;
-    int star_size = (int)(0.0308 * height); // Corrected star size (half the original size)
-
-    for (int y = 0; y &lt; height; y += stripe_height) {
-        if (y / stripe_height % 2 == 0) {
-            gdImageFilledRectangle(img, 0, y, stripe_width, y + stripe_height, red);
-        } else {
-            gdImageFilledRectangle(img, 0, y, stripe_width, y + stripe_height, white);
-        }
-    }
-
-    gdImageFilledRectangle(img, 0, 0, width * 2 / 5, stripe_height * 7, blue);
-
-    int star_spacing_x = (int)(0.063 * height); // Horizontal spacing between stars
-    int star_spacing_y = (int)(0.054 * height); // Vertical spacing between stars
-    int star_start_x = (int)(0.0616 * height); // Starting X position for stars
-    int star_start_y = (int)(0.0485 * height); // Starting Y position for stars
-
-    for (int row = 0; row &lt; 9; row++) {
-        int starsPerRow = (row % 2 == 0) ? 6 : 5;
-
-        for (int star = 0; star &lt; starsPerRow; star++) {
-            int x = star_start_x + star * star_spacing_x;
-            int y = star_start_y + row * star_spacing_y;
-            draw_star(img, x, y, star_size, white);
-        }
-    }
-}
-
-void draw_star(gdImagePtr img, int x, int y, int size, int color) {
-    gdPoint points[10];
-
-    for (int i = 0; i &lt; 10; i++) {
-        double angle = M_PI / 2 + i * 2 * M_PI / 10;
-        int radius = (i % 2 == 0) ? size : size / 2;
-        points[i].x = x + radius * cos(angle);
-        points[i].y = y + radius * sin(angle);
-    }
-
-    // Fill the star with white color
-    gdImageFilledPolygon(img, points, 10, color);
-}</pre>
-<p><img alt="" height="149" src="./../images/usa.png" width="250"/><br/><br/><br/>利用<span>C 與 gnuplot 及 gd 繪圖程式庫的結合以</span>生成台灣國旗以及美國國旗</p>
-<br />W6 << <a href='W6.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
+    <div id="tipue_search_content">Localhost << <a href='Localhost.html'>Previous</a> <a href='W2~W5.html'>Next</a> >> W2~W5<br /><h1>Exercises</h1>
+<br />Localhost << <a href='Localhost.html'>Previous</a> <a href='W2~W5.html'>Next</a> >> W2~W5</div>
         
     <!-- footer -->
       <div class="container">
